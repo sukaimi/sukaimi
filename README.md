@@ -1,8 +1,8 @@
-<!-- Header Banner — Click to explore the live interactive jellyfish -->
+<!-- Animated Jellyfish Banner — Click to explore the full interactive experience -->
 <div align="center">
 
 <a href="https://sukaimi.github.io/pulse-of-singapore">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:020414,25:0d0d2b,50:1a1245,75:0d0d2b,100:020414&height=220&section=header&text=Sukaimi%20Sukri&fontSize=42&fontColor=8b7cdd&fontAlignY=35&desc=%E2%9C%A8%20Click%20to%20experience%20Pulse%20of%20Singapore%20%E2%80%94%20live%20data%20jellyfish%20%F0%9F%AA%BC&descSize=14&descColor=6b5eb0&descAlignY=55&animation=fadeIn" width="100%" />
+  <img src="https://raw.githubusercontent.com/sukaimi/sukaimi/main/jellyfish-banner.svg" width="100%" alt="Pulse of Singapore — Data Jellyfish" />
 </a>
 
 <!-- Typing Animation -->

@@ -1,0 +1,335 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020414"/>
+      <stop offset="100%" stop-color="#02030e"/>
+    </linearGradient>
+
+    <!-- Jellyfish bell glow -->
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#B4A0FF" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#8b7cdd" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#020414" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bell body gradient -->
+    <radialGradient id="bell" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#B4A0FF" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#8b7cdd" stop-opacity="0.12"/>
+      <stop offset="80%" stop-color="#6b5eb0" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#3d2b7a" stop-opacity="0.02"/>
+    </radialGradient>
+
+    <!-- Inner organ glow -->
+    <radialGradient id="organ" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d4c8ff" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#B4A0FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#6b5eb0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bioluminescent node -->
+    <radialGradient id="node" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8deff" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#B4A0FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8b7cdd" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Small jellyfish glow -->
+    <radialGradient id="smGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#8b7cdd" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#020414" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Particle glow -->
+    <radialGradient id="particle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b7cdd" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6b5eb0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text glow filter -->
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft blur for ambient orbs -->
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+
+    <filter id="medBlur">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="320" fill="url(#bg)"/>
+
+  <!-- Ambient light orbs -->
+  <circle cx="200" cy="60" r="120" fill="#1a1245" opacity="0.15" filter="url(#softBlur)">
+    <animate attributeName="cx" values="200;240;200" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0.08;0.15" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="100" r="100" fill="#0d0d2b" opacity="0.2" filter="url(#softBlur)">
+    <animate attributeName="cx" values="700;660;700" dur="15s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Floating particles -->
+  <g opacity="0.6">
+    <circle cx="120" cy="80" r="1" fill="#6b5eb0" opacity="0.3">
+      <animate attributeName="cy" values="80;70;80" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="250" r="0.8" fill="#8b7cdd" opacity="0.2">
+      <animate attributeName="cy" values="250;238;250" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="60" r="1.2" fill="#6b5eb0" opacity="0.25">
+      <animate attributeName="cy" values="60;50;60" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.08;0.25" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="780" cy="200" r="0.7" fill="#B4A0FF" opacity="0.2">
+      <animate attributeName="cy" values="200;190;200" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="180" r="0.9" fill="#8b7cdd" opacity="0.15">
+      <animate attributeName="cy" values="180;168;180" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="280" r="1" fill="#6b5eb0" opacity="0.18">
+      <animate attributeName="cy" values="280;270;280" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="830" cy="50" r="0.6" fill="#B4A0FF" opacity="0.22">
+      <animate attributeName="cy" values="50;42;50" dur="7.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="40" r="0.8" fill="#8b7cdd" opacity="0.12">
+      <animate attributeName="cy" values="40;30;40" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ===== SMALL JELLYFISH LEFT ===== -->
+  <g opacity="0.25">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 5,-8; 0,0" dur="10s" repeatCount="indefinite"/>
+    <!-- Glow -->
+    <circle cx="160" cy="100" r="50" fill="url(#smGlow)"/>
+    <!-- Bell -->
+    <ellipse cx="160" cy="100" rx="22" ry="16" fill="none" stroke="#8b7cdd" stroke-width="0.8" opacity="0.3">
+      <animate attributeName="ry" values="16;14;16" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="22;24;22" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="160" cy="100" rx="18" ry="13" fill="#6b5eb0" opacity="0.08">
+      <animate attributeName="ry" values="13;11;13" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Tendrils -->
+    <g stroke="#6b5eb0" stroke-width="0.5" fill="none" opacity="0.4">
+      <path d="M148,112 Q146,130 150,148">
+        <animate attributeName="d" values="M148,112 Q146,130 150,148;M148,112 Q142,132 148,150;M148,112 Q146,130 150,148" dur="5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M155,114 Q154,135 158,155">
+        <animate attributeName="d" values="M155,114 Q154,135 158,155;M155,114 Q150,138 155,158;M155,114 Q154,135 158,155" dur="4.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M165,114 Q167,135 163,155">
+        <animate attributeName="d" values="M165,114 Q167,135 163,155;M165,114 Q171,138 166,158;M165,114 Q167,135 163,155" dur="5.2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M172,112 Q175,130 171,148">
+        <animate attributeName="d" values="M172,112 Q175,130 171,148;M172,112 Q179,132 174,150;M172,112 Q175,130 171,148" dur="4.8s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- ===== SMALL JELLYFISH RIGHT ===== -->
+  <g opacity="0.18">
+    <animateTransform attributeName="transform" type="translate" values="0,0; -6,-5; 0,0" dur="13s" repeatCount="indefinite"/>
+    <circle cx="740" cy="160" r="40" fill="url(#smGlow)"/>
+    <ellipse cx="740" cy="160" rx="16" ry="12" fill="none" stroke="#6b5eb0" stroke-width="0.6" opacity="0.3">
+      <animate attributeName="ry" values="12;10;12" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="16;18;16" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+    <g stroke="#3d2b7a" stroke-width="0.4" fill="none" opacity="0.5">
+      <path d="M732,170 Q730,185 734,200">
+        <animate attributeName="d" values="M732,170 Q730,185 734,200;M732,170 Q726,187 731,203;M732,170 Q730,185 734,200" dur="6s" repeatCount="indefinite"/>
+      </path>
+      <path d="M740,171 Q739,188 742,205">
+        <animate attributeName="d" values="M740,171 Q739,188 742,205;M740,171 Q735,190 739,208;M740,171 Q739,188 742,205" dur="5.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M748,170 Q750,185 746,200">
+        <animate attributeName="d" values="M748,170 Q750,185 746,200;M748,170 Q754,187 749,203;M748,170 Q750,185 746,200" dur="6.2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- ===== TINY JELLYFISH TOP RIGHT ===== -->
+  <g opacity="0.1">
+    <animateTransform attributeName="transform" type="translate" values="0,0; -3,-4; 0,0" dur="16s" repeatCount="indefinite"/>
+    <ellipse cx="820" cy="55" rx="8" ry="6" fill="none" stroke="#6b5eb0" stroke-width="0.4" opacity="0.4">
+      <animate attributeName="ry" values="6;5;6" dur="3.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <line x1="816" y1="60" x2="815" y2="78" stroke="#3d2b7a" stroke-width="0.3" opacity="0.4">
+      <animate attributeName="x2" values="815;812;815" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="820" y1="61" x2="820" y2="80" stroke="#3d2b7a" stroke-width="0.3" opacity="0.3"/>
+    <line x1="824" y1="60" x2="825" y2="78" stroke="#3d2b7a" stroke-width="0.3" opacity="0.4">
+      <animate attributeName="x2" values="825;828;825" dur="4.2s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- ===== HERO JELLYFISH (CENTER) ===== -->
+  <g>
+    <!-- Main bob animation -->
+    <animateTransform attributeName="transform" type="translate" values="0,0; 3,-10; 0,0" dur="8s" repeatCount="indefinite"/>
+
+    <!-- Outer glow -->
+    <circle cx="450" cy="110" r="130" fill="url(#glow)">
+      <animate attributeName="r" values="130;140;130" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Bell layers - breathing -->
+    <!-- Outermost ghost layer -->
+    <ellipse cx="450" cy="115" rx="78" ry="52" fill="none" stroke="#6b5eb0" stroke-width="0.5" opacity="0.08">
+      <animate attributeName="ry" values="52;46;52" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="78;84;78" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Outer bell -->
+    <ellipse cx="450" cy="115" rx="70" ry="48" fill="url(#bell)" stroke="#8b7cdd" stroke-width="0.8" opacity="0.15">
+      <animate attributeName="ry" values="48;42;48" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="70;76;70" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Mid bell -->
+    <ellipse cx="450" cy="115" rx="60" ry="42" fill="#8b7cdd" opacity="0.06">
+      <animate attributeName="ry" values="42;36;42" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="60;66;60" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Inner bell -->
+    <ellipse cx="450" cy="115" rx="48" ry="34" fill="#B4A0FF" opacity="0.04">
+      <animate attributeName="ry" values="34;29;34" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="48;53;48" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Scalloped bell edge using small arcs -->
+    <path d="M380,125 Q387,132 394,125 Q401,132 408,125 Q415,132 422,125 Q429,132 436,125 Q443,132 450,125 Q457,132 464,125 Q471,132 478,125 Q485,132 492,125 Q499,132 506,125 Q513,132 520,125" fill="none" stroke="#8b7cdd" stroke-width="0.6" opacity="0.2">
+      <animate attributeName="d" values="M380,125 Q387,132 394,125 Q401,132 408,125 Q415,132 422,125 Q429,132 436,125 Q443,132 450,125 Q457,132 464,125 Q471,132 478,125 Q485,132 492,125 Q499,132 506,125 Q513,132 520,125;M383,128 Q390,135 397,128 Q404,135 411,128 Q418,135 425,128 Q432,135 439,128 Q446,135 453,128 Q460,135 467,128 Q474,135 481,128 Q488,135 495,128 Q502,135 509,128 Q516,135 517,128;M380,125 Q387,132 394,125 Q401,132 408,125 Q415,132 422,125 Q429,132 436,125 Q443,132 450,125 Q457,132 464,125 Q471,132 478,125 Q485,132 492,125 Q499,132 506,125 Q513,132 520,125" dur="6s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Internal organs -->
+    <circle cx="435" cy="105" r="12" fill="url(#organ)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="465" cy="105" r="12" fill="url(#organ)" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.25;0.5" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="445" cy="95" r="8" fill="url(#organ)" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.2;0.4" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="458" cy="95" r="8" fill="url(#organ)" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.15;0.35" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Central gonad glow -->
+    <circle cx="450" cy="100" r="10" fill="#d4c8ff" opacity="0.08" filter="url(#medBlur)">
+      <animate attributeName="opacity" values="0.08;0.15;0.08" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="10;14;10" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Sensory dots around bell rim -->
+    <g>
+      <circle cx="385" cy="122" r="1.5" fill="#d4c8ff" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="400" cy="127" r="1.2" fill="#B4A0FF" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.15;0.5" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="420" cy="130" r="1.8" fill="#d4c8ff" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.25;0.7" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="440" cy="131" r="1" fill="#B4A0FF" opacity="0.45">
+        <animate attributeName="opacity" values="0.45;0.1;0.45" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="460" cy="131" r="1.5" fill="#d4c8ff" opacity="0.55">
+        <animate attributeName="opacity" values="0.55;0.2;0.55" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="480" cy="130" r="1.3" fill="#B4A0FF" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.15;0.5" dur="3.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="500" cy="127" r="1.6" fill="#d4c8ff" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="515" cy="122" r="1.1" fill="#B4A0FF" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4.2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ===== TENTACLES ===== -->
+    <!-- Oral arms (thick, central) -->
+    <g stroke-linecap="round" fill="none" opacity="0.35">
+      <path d="M430,130 Q425,170 432,210 Q436,240 428,270" stroke="#8b7cdd" stroke-width="2.5">
+        <animate attributeName="d" values="M430,130 Q425,170 432,210 Q436,240 428,270;M430,130 Q418,172 428,215 Q440,245 425,275;M430,130 Q425,170 432,210 Q436,240 428,270" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <path d="M445,132 Q443,175 448,215 Q450,248 444,280" stroke="#6b5eb0" stroke-width="2">
+        <animate attributeName="d" values="M445,132 Q443,175 448,215 Q450,248 444,280;M445,132 Q438,178 445,220 Q455,252 442,285;M445,132 Q443,175 448,215 Q450,248 444,280" dur="6.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M458,132 Q460,175 455,215 Q453,248 459,280" stroke="#6b5eb0" stroke-width="2">
+        <animate attributeName="d" values="M458,132 Q460,175 455,215 Q453,248 459,280;M458,132 Q465,178 458,220 Q448,252 461,285;M458,132 Q460,175 455,215 Q453,248 459,280" dur="7.2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M472,130 Q478,170 471,210 Q467,240 475,270" stroke="#8b7cdd" stroke-width="2.5">
+        <animate attributeName="d" values="M472,130 Q478,170 471,210 Q467,240 475,270;M472,130 Q485,172 474,215 Q462,245 478,275;M472,130 Q478,170 471,210 Q467,240 475,270" dur="6.8s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Outer tendrils (thin, spread wide) -->
+    <g stroke-linecap="round" fill="none" opacity="0.2">
+      <path d="M390,126 Q382,160 388,200 Q392,230 384,260" stroke="#6b5eb0" stroke-width="0.6">
+        <animate attributeName="d" values="M390,126 Q382,160 388,200 Q392,230 384,260;M390,126 Q375,163 385,205 Q398,235 380,265;M390,126 Q382,160 388,200 Q392,230 384,260" dur="8s" repeatCount="indefinite"/>
+      </path>
+      <path d="M400,128 Q394,165 402,205 Q405,235 397,265" stroke="#3d2b7a" stroke-width="0.5">
+        <animate attributeName="d" values="M400,128 Q394,165 402,205 Q405,235 397,265;M400,128 Q388,168 398,210 Q412,240 394,270;M400,128 Q394,165 402,205 Q405,235 397,265" dur="7.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M410,130 Q406,168 414,208 Q416,238 408,268" stroke="#6b5eb0" stroke-width="0.7">
+        <animate attributeName="d" values="M410,130 Q406,168 414,208 Q416,238 408,268;M410,130 Q400,172 410,213 Q422,243 405,273;M410,130 Q406,168 414,208 Q416,238 408,268" dur="6.8s" repeatCount="indefinite"/>
+      </path>
+      <path d="M490,130 Q496,168 488,208 Q486,238 494,268" stroke="#6b5eb0" stroke-width="0.7">
+        <animate attributeName="d" values="M490,130 Q496,168 488,208 Q486,238 494,268;M490,130 Q502,172 492,213 Q480,243 497,273;M490,130 Q496,168 488,208 Q486,238 494,268" dur="7.3s" repeatCount="indefinite"/>
+      </path>
+      <path d="M502,128 Q508,165 500,205 Q498,235 506,265" stroke="#3d2b7a" stroke-width="0.5">
+        <animate attributeName="d" values="M502,128 Q508,165 500,205 Q498,235 506,265;M502,128 Q514,168 504,210 Q492,240 508,270;M502,128 Q508,165 500,205 Q498,235 506,265" dur="7.8s" repeatCount="indefinite"/>
+      </path>
+      <path d="M512,126 Q520,160 514,200 Q510,230 518,260" stroke="#6b5eb0" stroke-width="0.6">
+        <animate attributeName="d" values="M512,126 Q520,160 514,200 Q510,230 518,260;M512,126 Q526,163 517,205 Q504,235 522,265;M512,126 Q520,160 514,200 Q510,230 518,260" dur="8.3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Bioluminescent nodes on tentacles -->
+    <circle cx="432" cy="195" r="4" fill="url(#node)">
+      <animate attributeName="cy" values="195;210;195" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="468" cy="205" r="3.5" fill="url(#node)">
+      <animate attributeName="cy" values="205;220;205" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.25;0.7" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="445" cy="240" r="2.8" fill="url(#node)">
+      <animate attributeName="cy" values="240;252;240" dur="7.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="458" cy="250" r="3" fill="url(#node)">
+      <animate attributeName="cy" values="250;262;250" dur="6.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0.3;0.75" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ===== TEXT ===== -->
+  <!-- Name -->
+  <text x="450" y="42" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="300" fill="#8b7cdd" letter-spacing="4" filter="url(#textGlow)">Sukaimi Sukri</text>
+
+  <!-- Subtitle -->
+  <text x="450" y="65" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#6b5eb0" letter-spacing="3" opacity="0.6">FULL-STACK DEVELOPER  ·  SINGAPORE</text>
+
+  <!-- Bottom vignette -->
+  <rect y="280" width="900" height="40" fill="url(#bg)" opacity="0.8"/>
+
+  <!-- Vignette overlay -->
+  <rect width="900" height="320" fill="url(#bg)" opacity="0" style="pointer-events:none"/>
+</svg>
