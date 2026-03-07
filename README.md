@@ -51,9 +51,9 @@ currently_building: Things at the intersection of code and creativity
 ## &nbsp;GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sukaimi&show_icons=true&hide_border=true&bg_color=020414&title_color=B4A0FF&icon_color=8b7cdd&text_color=6b5eb0&ring_color=8b7cdd" height="170" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=sukaimi&show_icons=true&hide_border=true&bg_color=020414&title_color=B4A0FF&icon_color=8b7cdd&text_color=6b5eb0&ring_color=8b7cdd&cache_seconds=86400" height="170" alt="stats" />
   &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sukaimi&layout=compact&hide_border=true&bg_color=020414&title_color=B4A0FF&text_color=6b5eb0" height="170" alt="languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sukaimi&layout=compact&hide_border=true&bg_color=020414&title_color=B4A0FF&text_color=6b5eb0&cache_seconds=86400" height="170" alt="languages" />
 </div>
 
 <br/>
