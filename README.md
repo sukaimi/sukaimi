@@ -1,7 +1,9 @@
-<!-- Header Banner -->
+<!-- Header Banner — Click to explore the live interactive jellyfish -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020414,25:0d0d2b,50:1a1245,75:0d0d2b,100:020414&height=220&section=header&text=Sukaimi%20Sukri&fontSize=42&fontColor=8b7cdd&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20Singapore%20%F0%9F%87%B8%F0%9F%87%AC&descSize=18&descColor=6b5eb0&descAlignY=55&animation=fadeIn" width="100%" />
+<a href="https://sukaimi.github.io/pulse-of-singapore">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:020414,25:0d0d2b,50:1a1245,75:0d0d2b,100:020414&height=220&section=header&text=Sukaimi%20Sukri&fontSize=42&fontColor=8b7cdd&fontAlignY=35&desc=%E2%9C%A8%20Click%20to%20experience%20Pulse%20of%20Singapore%20%E2%80%94%20live%20data%20jellyfish%20%F0%9F%AA%BC&descSize=14&descColor=6b5eb0&descAlignY=55&animation=fadeIn" width="100%" />
+</a>
 
 <!-- Typing Animation -->
 <a href="https://git.io/typing-svg">
